@@ -34,6 +34,8 @@ public class Product {
     public double getPrecio() {
         return Precio;
     }
+
+    
     public void setId(String Id) {
         this.Id = Id;
     }
