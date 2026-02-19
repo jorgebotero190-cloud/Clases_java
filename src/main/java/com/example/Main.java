@@ -12,25 +12,32 @@ public class Main {
         product1.setPrecio(25500);
         product1.setDescripcion("Mouse inalámbrico con alta precisión");
 
-        System.out.println("ID: " + product1.getId());
-        System.out.println("Nombre: " + product1.getNombre());
-        System.out.println("Precio: " + product1.getPrecio());
-        System.out.println("Descripción: " + product1.getDescripcion());
+        System.out.println("ID : " + product1.getId());
+        System.out.println("Nombre : " + product1.getNombre());
+        System.out.println("Precio : " + product1.getPrecio());
+        System.out.println("Descripción : " + product1.getDescripcion());
         System.out.println();
 
         Product product2 = new Product("34", "Teclado", "Teclado mecánico con retroiluminación", 45000);
         
 
-        System.out.println("ID: " + product2.getId());
+        System.out.println("ID : -" + product2.getId());
         System.out.println();
-        System.out.println("Nombre: " + product2.getNombre());
+        System.out.println("Nombre : -" + product2.getNombre());
         System.out.println();
-        System.out.println("Precio: " + product2.getPrecio());
+        System.out.println("Precio : -" + product2.getPrecio());
         System.out.println();
-        System.out.println("Descripción: " + product2.getDescripcion());
+        System.out.println("Descripción : -" + product2.getDescripcion());
         System.out.println();
-        System.out.println("estes es el segundo producto: " + product2.getNombre());
+        System.out.println("estes es el segundo producto : " + product2.getNombre());
         System.out.println();
-
+      
         
+    System.out.println("product1: " + product1);
+    System.out.println();
+    System.out.println("product2: " + product2);
+    System.out.println();
+    
+    
+
     }}
