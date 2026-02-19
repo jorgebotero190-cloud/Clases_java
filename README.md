@@ -31,6 +31,7 @@ Métodos implementados:
 - Getters: `getId()`, `getNombre()`, `getDescripcion()`, `getPrecio()`
 - Setters: `setId()`, `setNombre()`, `setDescripcion()`, `setPrecio()` (con validaciones que lanzan `IllegalArgumentException`)
 - `toString()` para representación en texto
+- `equals()` y `hashCode()` basados en el `id` del producto
 
 ## Compilar y ejecutar
 
@@ -53,18 +54,40 @@ mvn compile exec:java -Dexec.mainClass="com.example.Main"
 - Constructores
 - Métodos getter y setter
 - Validaciones en setters con `IllegalArgumentException`
-- Sobrescritura de `toString()`
+- Sobrescritura de `toString()`, `equals()` y `hashCode()`
 - Instanciación de objetos
+
+## Control de versiones con Git
+
+El proyecto utiliza Git para registrar el progreso del desarrollo.
+
+```bash
+# Ver el estado de los archivos modificados
+git status
+
+# Agregar archivos al área de preparación
+git add .
+
+# Crear un commit con un mensaje descriptivo
+git commit -m "descripción del cambio"
+
+# Ver el historial de commits
+git log --oneline
+
+# Subir los cambios al repositorio remoto
+git push origin main
+```
 
 ## Tecnologías
 
 - Java
 - Maven
+- Git
 
-##
-Atributos corregidos a cameLCase u tipo id corregido a int.
+## Autor
 
--agregar comandos Maven para compilar y ejecutar
+Jorge Botero — Proyecto educativo de práctica POO en Java.
 
-## github
- en este se crearon commit los cual los voy llevan a medida que voy en la realizacion y revision de los campos realizados guiados y hechos con los controles.
+## Licencia
+
+Este proyecto es de uso educativo.

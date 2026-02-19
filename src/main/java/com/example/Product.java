@@ -46,10 +46,16 @@ public class Product {
     }
 
     public void setNombre(String nombre) {
+        if (nombre == null || nombre.trim().isEmpty()) {
+            throw new IllegalArgumentException("El nombre no puede ser nulo o vacío.");
+        }
         this.nombre = nombre;
     }
 
     public void setDescripcion(String descripcion) {
+        if (descripcion == null || descripcion.trim().isEmpty()) {
+            throw new IllegalArgumentException("La descripción no puede ser nula o vacía.");
+        }
         this.descripcion = descripcion;
     }
 
@@ -59,6 +65,19 @@ public class Product {
         } else {
             throw new IllegalArgumentException("El precio no puede ser negativo.");
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Product)) return false;
+        Product product = (Product) o;
+        return id == product.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Integer.hashCode(id);
     }
 
     @Override
