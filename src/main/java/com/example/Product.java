@@ -36,11 +36,11 @@ public class Product {
     }
 
     
-    public void setId(String Id) {
-        if (Id != null && !Id.isEmpty() ){
-            this.Id = Id;
+    public void setId(int Id) {
+        if (Id >= 0) {
+            this.Id = String.valueOf(Id);
         } else {
-            System.out.println("El ID no puede ser nulo o vacío.");
+            System.out.println("El ID no puede ser negativo.");
         }
     }
     public void setNombre(String Nombre) {
@@ -58,5 +58,14 @@ public class Product {
             System.out.println("El precio no puede ser negativo. No se ha actualizado el precio.");
         }
     
+    }
+        @Override
+     public String toString() {
+        return "Product{" +
+                "Id='" + Id + '\'' +
+                ", Nombre='" + Nombre + '\'' +
+                ", Descripcion='" + Descripcion + '\'' +
+                ", Precio=" + Precio +
+                '}';
     }
 }

@@ -7,7 +7,7 @@ public class Main {
               Product product1 = new Product();
               System.out.println("producto1 :");
 
-        product1.setId("P001");
+        product1.setId(1);
      product1.setNombre("Mouse");
         product1.setPrecio(25500);
         product1.setDescripcion("Mouse inalámbrico con alta precisión");
@@ -18,7 +18,7 @@ public class Main {
         System.out.println("Descripción: " + product1.getDescripcion());
         System.out.println();
 
-        Product product2 = new Product("P0034", "Teclado", "Teclado mecánico con retroiluminación", 45000);
+        Product product2 = new Product("34", "Teclado", "Teclado mecánico con retroiluminación", 45000);
         
 
         System.out.println("ID: " + product2.getId());
