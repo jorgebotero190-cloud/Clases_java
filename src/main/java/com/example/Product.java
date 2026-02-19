@@ -15,7 +15,7 @@ public class Product {
     }
 
    public Product(String id, String Nombre, String Descripcion, double Precio) {
-    this.Id = Id;
+    this.Id = id;
     this.Nombre = Nombre;
     this.Descripcion = Descripcion;
     this.Precio = Precio;
@@ -37,7 +37,11 @@ public class Product {
 
     
     public void setId(String Id) {
-        this.Id = Id;
+        if (Id != null && !Id.isEmpty() ){
+            this.Id = Id;
+        } else {
+            System.out.println("El ID no puede ser nulo o vacío.");
+        }
     }
     public void setNombre(String Nombre) {
         this.Nombre = Nombre;
@@ -47,6 +51,12 @@ public class Product {
     }
 
     public void setPrecio(double Precio) {
-        this.Precio = Precio;
+        if (Precio >= 0) {
+            this.Precio = Precio;
+
+        } else {
+            System.out.println("El precio no puede ser negativo. No se ha actualizado el precio.");
+        }
+    
     }
 }

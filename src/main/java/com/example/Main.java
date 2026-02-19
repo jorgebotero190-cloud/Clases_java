@@ -9,12 +9,28 @@ public class Main {
 
         product1.setId("P001");
      product1.setNombre("Mouse");
-        product1.setPrecio(25.50);
+        product1.setPrecio(25500);
         product1.setDescripcion("Mouse inalámbrico con alta precisión");
 
         System.out.println("ID: " + product1.getId());
         System.out.println("Nombre: " + product1.getNombre());
         System.out.println("Precio: " + product1.getPrecio());
         System.out.println("Descripción: " + product1.getDescripcion());
+        System.out.println();
+
+        Product product2 = new Product("P0034", "Teclado", "Teclado mecánico con retroiluminación", 45000);
+        
+
+        System.out.println("ID: " + product2.getId());
+        System.out.println();
+        System.out.println("Nombre: " + product2.getNombre());
+        System.out.println();
+        System.out.println("Precio: " + product2.getPrecio());
+        System.out.println();
+        System.out.println("Descripción: " + product2.getDescripcion());
+        System.out.println();
+        System.out.println("estes es el segundo producto: " + product2.getNombre());
+        System.out.println();
+
         
     }}
