@@ -20,16 +20,12 @@ public class Product {
     this.Descripcion = Descripcion;
     this.Precio = Precio;
     }
-    public String getId() {
-        return id;
+
+    public void setDescripcion(String Descripcion) {
+        this.Descripcion = Descripcion;
     }
-    public String getNombre() {
-        return Nombre;
-    }
-    public String getDescripcion() {
-        return Descripcion;
-    }
-    public double getPrecio() {
-        return Precio;
+
+    public void setPrecio(double Precio) {
+        this.Precio = Precio;
     }
 }
