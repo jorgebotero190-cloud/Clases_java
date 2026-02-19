@@ -60,3 +60,15 @@ mvn compile exec:java -Dexec.mainClass="com.example.Main"
 
 - Java
 - Maven
+
+##
+Atributos corregidos a cameLCase u tipo id corregido a int.
+
+-agregar comandos Maven para compilar y ejecutar
+
+## github
+ en este se crearon doce commit los cual los voy llevan a medida que voy en la realizacion y revision de los campos realizados guiados y hechon con los controles
+ git branch
+ git add .
+ git commit -m 
+ git push.
