@@ -2,72 +2,72 @@ package com.example;
 
 public class Product {
 
-    private String Id;
-    private String Nombre;
-    private String Descripcion;
-    private double Precio;
+    private int id;
+    private String nombre;
+    private String descripcion;
+    private double precio;
 
     public Product() {
-    this.Id = "";
-    this.Nombre = "";
-    this.Descripcion = "";
-    this.Precio = 0.0;
+        this.id = 0;
+        this.nombre = "";
+        this.descripcion = "";
+        this.precio = 0.0;
     }
 
-   public Product(String id, String Nombre, String Descripcion, double Precio) {
-    this.Id = id;
-    this.Nombre = Nombre;
-    this.Descripcion = Descripcion;
-    this.Precio = Precio;
+    public Product(int id, String nombre, String descripcion, double precio) {
+        this.id = id;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.precio = precio;
     }
 
-    public String getId() {
-        return Id;
+    public int getId() {
+        return id;
     }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
+
     public String getDescripcion() {
-        return Descripcion;
+        return descripcion;
     }
+
     public double getPrecio() {
-        return Precio;
+        return precio;
     }
 
-    
-    public void setId(int Id) {
-        if (Id >= 0) {
-            this.Id = String.valueOf(Id);
+    public void setId(int id) {
+        if (id >= 0) {
+            this.id = id;
         } else {
-            System.out.println("El ID no puede ser negativo.");
+            throw new IllegalArgumentException("El ID no puede ser negativo.");
         }
     }
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
-    }
-    public void setDescripcion(String Descripcion) {
-        this.Descripcion = Descripcion;
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void setPrecio(double Precio) {
-        if (Precio >= 0) {
-            this.Precio = Precio;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
 
+    public void setPrecio(double precio) {
+        if (precio >= 0) {
+            this.precio = precio;
         } else {
-            System.out.println("El precio no puede ser negativo. No se ha actualizado el precio.");
+            throw new IllegalArgumentException("El precio no puede ser negativo.");
         }
-    
     }
-        @Override
-     public String toString() {
-        return "Product{"   +
-                "  Id =  " + Id + '\'' +
-                " , Nombre = ' " + Nombre + '\'' +
-                "  , Descripcion = ' " + Descripcion + '\'' +
-                " , Precio = " + Precio + 
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                ", precio=" + precio +
                 '}';
-        
-
     }
 }
